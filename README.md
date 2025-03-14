@@ -65,13 +65,3 @@ python api_chatbot/chatbot.py
 📝 You: exit
 👋 Goodbye!
 ```
-
-## Project Structure
-
-```
-api_chatbot/
-│── chatbot.py              # Main chatbot script
-│── vector_db/              # FAISS vector store directory
-│── .env                    # OpenAI API Key (must be set)
-│── requirements.txt         # Dependencies list
-```
