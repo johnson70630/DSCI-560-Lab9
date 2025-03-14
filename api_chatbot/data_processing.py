@@ -42,7 +42,7 @@ def store_in_faiss(chunks, faiss_path="faiss_index"):
 #     retrieved_docs = vectorstore.similarity_search(query, k=top_k)
 #     print("\n🔍 **Top Relevant Passages:**")
 #     for i, doc in enumerate(retrieved_docs):
-#         print(f"\nResult {i+1}:\n{doc.page_content[:500]}")  # Show first 500 chars
+#         print(f"\nResult {i+1}:\n{doc.page_content}")  # Show first 500 chars
 #     return retrieved_docs
 
 # Main Function to Run the Pipeline
