@@ -8,7 +8,7 @@ from langchain.memory import ConversationBufferMemory
 load_dotenv()
 
 # Function to Load FAISS Vector Store
-def load_vector_store(faiss_path="api_chatbot/vector_db"):
+def load_vector_store(faiss_path="vector_db"):
     """Loads the FAISS vector store from disk."""
     embedding_model = OpenAIEmbeddings(model="text-embedding-ada-002")
     vector_store = FAISS.load_local(
