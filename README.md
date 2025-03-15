@@ -145,4 +145,9 @@ First, I need to figure out what's in this PDF based on the given context. It se
 
 ---
 
+## Web Design
+
+Run `app.py` in `api_chatbox` folder. You will see something like `* Running on http://127.0.0.1:5000` in terminal output. Paste this url on your local browser and you'd be able to upload pdf and interact with the chatbot on the web.
+
+
 
