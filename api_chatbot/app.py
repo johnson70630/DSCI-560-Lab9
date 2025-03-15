@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 import os
-from chatbot import ask_chatbot  # Import chatbot function
-from data_processing import process_pdfs  # Import PDF processing function
+# from chatbot import ask_chatbot  # Import chatbot function
+# from data_processing import process_pdfs  # Import PDF processing function
+from chatbot_os_ver import ask_chatbot  # Import chatbot function
+from data_preprocessing_os_ver import process_pdfs  # Import PDF processing function
 
 app = Flask(__name__)
 
