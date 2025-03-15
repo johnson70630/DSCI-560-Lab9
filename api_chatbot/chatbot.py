@@ -43,6 +43,20 @@ def chat_with_vector_db(conversation_chain):
         response = conversation_chain({"question": user_question})
         print(f"🤖 AI: {response['answer']}\n")
 
+
+
+# Function to Handle a Single Question from the Web App
+def ask_chatbot(question):
+    """Handles a single user query and returns the chatbot's response."""
+    vector_store = load_vector_store()  # Load FAISS database
+    conversation_chain = create_conversation_chain(vector_store)  # Create chat model
+    response = conversation_chain.invoke({"question": question})  
+    return response["answer"]  # Return the chatbot's answer
+
+
+
+
+
 # Driver Function
 def main():
     # Load FAISS vector store

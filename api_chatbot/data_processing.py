@@ -45,6 +45,37 @@ def store_in_faiss(chunks, faiss_path="faiss_index"):
 #         print(f"\nResult {i+1}:\n{doc.page_content}")  # Show first 500 chars
 #     return retrieved_docs
 
+
+
+def process_pdfs(pdf_folder, faiss_path="vector_db"):
+    """Processes all PDFs in a folder, extracts text, chunks it, and stores embeddings."""
+    pdf_files = [os.path.join(pdf_folder, f) for f in os.listdir(pdf_folder) if f.endswith(".pdf")]
+    
+    if not pdf_files:
+        return "No PDF files found."
+
+    # Load and process PDFs
+    documents = []
+    for pdf in pdf_files:
+        docs = load_pdf(pdf)
+        if docs:
+            documents.extend(docs)
+
+    # Split text into chunks
+    text_chunks = split_text(documents)
+
+    # Store embeddings in FAISS
+    store_in_faiss(text_chunks, faiss_path)
+
+    return "PDFs processed successfully!"
+
+
+
+
+
+
+
+
 # Main Function to Run the Pipeline
 def main():
     # Ask user for the PDF file path
