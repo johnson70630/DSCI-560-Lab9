@@ -80,7 +80,7 @@ These Python scripts (`data_preprocessing_os_ver.py` & `chatbot_os_ver.py`) extr
 Ensure you have the necessary dependencies installed using the following command:
 
 ```bash
-pip install langchain langchain-huggingface langchain-community faiss-cpu python-dotenv
+pip install langchain langchain-huggingface langchain-community faiss-cpu python-dotenv llama-cpp-python
 ```
 
 #### 2. Download the LlamaCpp Model
