@@ -82,6 +82,7 @@ Ensure you have the necessary dependencies installed using the following command
 ```bash
 pip install langchain langchain-huggingface langchain-community faiss-cpu python-dotenv llama-cpp-python
 ```
+*To set up `llama-cpp-python`, please search for instruction online*
 
 #### 2. Download the LlamaCpp Model
 
